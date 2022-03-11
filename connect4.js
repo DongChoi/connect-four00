@@ -84,6 +84,12 @@ class Game {
   /** endGame: announce game end */
 
   endGame(msg) {
+    // TODO: Fix removeEventListener
+    let top = document.querySelectorAll("#column-top");
+    debugger;
+    for (let i = 0; i < top.length; i++) {
+      top[i].removeEventListener("click", this.makeHtmlBoard);
+    }
     alert(msg);
   }
 
